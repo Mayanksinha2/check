@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox </title>
+    <script>
+        function check(){
+            txt="";
+            computer=document.forms[0].computer;
+            for (i =0; i<computer.length; ++i){
+                if (computer[i].checked){
+                    txt=txt + computer[i].value + " ";
+                }
+            }
+            document.forms[0].Order.value=txt;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Please select your computer configuration<br></h1>
+        <h3>
+            <input type="checkbox" name="computer" value="CPU Intel P4 1.8GHz">Intel P4 1.8GHz<br>
+            <input type="checkbox" name="computer" value="HDD 40 GB">With 40 GB HDD<br>
+            <input type="checkbox" name="computer" value="15 inch color Monitor">With Monitor<br>
+            <input type="checkbox" name="computer" value="1.44MD FDD">With FDD<br>
+            <input type="checkbox" name="computer" value="CD ROM Drive">with CD ROM Drive<br>
+            <input type="checkbox" name="computer" value="Printer">With Printer<br>
+            <input type="text" name="Order" size="50">
+            <input type="button" name="test" onclick="check()" value="ORDER PLEASE">
+        </h3>
+    </form>
+    
+</body>
+</html>
